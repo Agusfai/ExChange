@@ -42,7 +42,7 @@ for (i = 1; i <= repes; i++) {
     }
 }
 let punteo = prompt("Muchas gracias por acudir a nuestro servicio! Quisiera puntuar nuestra atención?")
-if (punteo === "si") {
+if (punteo === "si" || punteo === "Si" || punteo === "SI") {
     prompt("Puntea su experiencia del 1 al 10");
     alert("Muchisimas gracias por colaborar! Que tenga una hermosa semana.");
 }
