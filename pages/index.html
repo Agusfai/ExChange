@@ -5,16 +5,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style.css">
     <title>ExChange</title>
+    <link rel="icon" href="../img/money-dollar-bill-cartoon-illustration-free-vector.jpg">
 </head>
 
 <body>
 
-    <h1>NOMBRE: AGUSTIN FAINA</h1>
-    <H2>PROYECTO: EXCHANGE</H2>
+    <div class="container">
+        <h1 class="titulo"><b>The best ExChange Web</b></h1>
+    </div>
+
+    <div class="container1">
+        <p class="nombre-usuario">Ingrese su nombre:</p>
+        <form class="form1">
+            <input type="text" id="respuesta-1">
+            <button type="button" onclick="agarrar()">Enter</button>
+        </form>
+    </div>
+
+    <p class="nombre" id="textobienvenida"></p>
+
+    <div class="container2">
+        <div class="dolar">
+            <p class="centrar">
+                DOLAR
+            </p>
+            <p>
+                Precio: 495
+            </p>
+            <p>
+                Disponible: si
+            </p>
+        </div>
+        <div class="euro">
+            <p class="centrar">
+                EURO
+            </p>
+            <p>
+                Precio: 248
+            </p>
+            <p>
+                Disponible: si
+            </p>
+        </div>
+        <div class="real">
+            <p class="centrar">
+                REAL
+            </p>
+            <p>
+                Precio: 43
+            </p>
+            <p>
+                Disponible: si
+            </p>
+        </div>
+    </div>
+
+
+    <div class="container3">
+        <p class="nombre-usuario"> Comprar o Vender:</p>
+        <form class="form1">
+            <input type="text" id="respuesta-2">
+            <button type="button" onclick="agarrar3()">Enter</button>
+        </form>
+    </div>
+
+    <div class="container4">
+        <p class="nombre-usuario" id="textobienvenida3">Esperando respuesta:</p>
+        <form class="form1">
+            <input type="text" id="respuesta-3">
+            <button type="button">Enter</button>
+        </form>
+    </div>
+
+    <div class="container5">
+        <p class="nombre-usuario"> Ingrese la cantidad:</p>
+        <form class="form1">
+            <input type="text" id="respuesta-4">
+            <button type="button" onclick="agarrar4()">Enter</button>
+        </form>
+    </div>
+
 
     <script src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
