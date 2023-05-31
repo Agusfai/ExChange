@@ -90,3 +90,11 @@ function calculadora(cantidadelegida, elegirmoneda) {
     );
   }
 }
+
+function resetearFormularios() {
+  var formularios = document.getElementsByTagName("form");
+
+  for (var i = 0; i < formularios.length; i++) {
+    formularios[i].reset();
+  }
+}

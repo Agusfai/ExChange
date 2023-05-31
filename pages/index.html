@@ -20,9 +20,9 @@
 
     <div class="container1">
         <p class="nombre-usuario">Ingrese su nombre:</p>
-        <form class="form1">
-            <input type="text" id="respuesta-1">
-            <button type="button" onclick="agarrar()">Enter</button>
+        <form class="form1" id="formulario1" >
+        <input type="text" id="respuesta-1">
+        <button type="button" onclick="agarrar()">Enter</button>
         </form>
     </div>
 
@@ -67,7 +67,7 @@
 
     <div class="container3">
         <p class="nombre-usuario"> Comprar o Vender:</p>
-        <form class="form1">
+        <form class="form1" id="formulario2">
             <input type="text" id="respuesta-2">
             <button type="button" onclick="agarrar3()">Enter</button>
         </form>
@@ -75,7 +75,7 @@
 
     <div class="container4">
         <p class="nombre-usuario" id="textobienvenida3">Esperando respuesta:</p>
-        <form class="form1">
+        <form class="form1" id="formulario3">
             <input type="text" id="respuesta-3">
             <button type="button">Enter</button>
         </form>
@@ -83,12 +83,15 @@
 
     <div class="container5">
         <p class="nombre-usuario"> Ingrese la cantidad:</p>
-        <form class="form1">
+        <form class="form1" id="formulario4">
             <input type="text" id="respuesta-4">
             <button type="button" onclick="agarrar4()">Enter</button>
         </form>
     </div>
 
+    <div class="botonr">
+    <button id="botonReset" onclick="resetearFormularios()">Reset</button>
+    </div>
 
     <script src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
