@@ -80,13 +80,17 @@ function calculadora(cantidadelegida, elegirmoneda) {
   }
 
   if (compraventa.value === "vender") {
-    alert(
-      `Usted deberá ir al banco con una suma de ${cantidadelegida} ${elegirmoneda} para recibir el monto final de ${total} pesos`
+    Swal.fire(
+      `Usted deberá ir al banco con una suma de ${cantidadelegida} ${elegirmoneda} para recibir el monto final de ${total} pesos`,
+      "Muchas gracias por trabajar con nosotros!",
+      "success"
     );
   }
   if (compraventa.value === "comprar") {
-    alert(
-      `Usted deberá ir al banco con una suma de ${total} pesos a retirar una suma de ${cantidadelegida} ${elegirmoneda}`
+    Swal.fire(
+      `Usted deberá ir al banco con una suma de ${total} pesos a retirar una suma de ${cantidadelegida} ${elegirmoneda}`,
+      "Muchas gracias por trabajar con nosotros!",
+      "success"
     );
   }
 }
@@ -98,3 +102,54 @@ function resetearFormularios() {
     formularios[i].reset();
   }
 }
+
+const banco = [
+  { nombre: "Santander", horario: "8hs a 18hs" },
+  { nombre: "Galicia", horario: "9hs a 12hs" },
+  { nombre: "BBVA", horario: "12hs a 20hs" },
+  { nombre: "Nacion", horario: "8hs a 20hs" },
+];
+localStorage.setItem("banco", JSON.stringify(banco));
+
+const bancoGuardado = JSON.parse(localStorage.getItem("banco"));
+console.log(bancoGuardado.nombre);
+console.log(bancoGuardado.seguridad);
+
+var datosguardados = localStorage.getItem(`banco`);
+setTimeout(() => {
+  if (datosguardados != "") {
+    Swal.fire(
+      `Disculpe la molestia pero recuerde esto acerca de los bancos a la hora de retirar: ${datosguardados}`
+    );
+  }
+}, 10000);
+
+function hacerAlgo() {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      var exito = true;
+
+      if (exito) {
+        Swal.fire(
+          "Ya casi!",
+          "Ya esta cerca de terminar su negocio!",
+          "success"
+        );
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Oh ha habido una falla!",
+        });
+      }
+    }, 20000);
+  });
+}
+
+hacerAlgo()
+  .then(function (resultado) {
+    alert(resultado);
+  })
+  .catch(function (error) {
+    alert("Error:", error);
+  });
